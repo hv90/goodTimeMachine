@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+  }
+
+  html, body {
+    min-height: 100%;
+    overflow: auto;
+  }
+  body {
+    overflow-x: hidden;
+    background-image: linear-gradient(
+      rgb(176, 226, 255),
+      rgb(85, 147, 204),
+      rgb(5, 5, 34),  
+      rgb(5, 5, 34)
+      );
+    font-family: monospace;
+  }
+
+  @keyframes iceMovementAnimation {
+    from {
+        background-position-x: -50px;
+    }
+    to {
+        background-position-x: 335px;
+    }
+}
+
+  div#title {
+    background-repeat: repeat-x;
+    background-size: 385px 410px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-image: url(../img/icebergs.jpg);
+    background-position: -50px -15px;
+
+    animation-name: iceMovementAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 90s;
+    animation-timing-function: linear;
+  }
+
+  @keyframes titleBoxShadowAnimation {
+    from {
+        box-shadow: 6px 6px rgb(0 0 0 / 30%);
+    }
+    to {
+        box-shadow: -6px 6px rgb(0 0 0 / 30%);
+    }   
+  }
+
+  div#title h1 {
+    text-shadow: 3px 4px rgb(0 0 0 / 20%);
+    box-shadow: 6px 6px rgb(0 0 0 / 30%);
+
+    animation-name: titleBoxShadowAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+  }
+
+  @keyframes fieldsetAnimation {
+    from {
+        background-position-x: -120px;
+    }
+    to {
+        background-position-x: 80px;
+    }   
+  }
+
+  fieldset {
+    display: flex;
+
+    background-image: radial-gradient( rgb(5, 5, 34), rgb(5, 5, 34), rgb(85, 147, 204), rgb(176, 226, 255), rgb(176, 226, 255));
+    background-size: 200px 55px;
+    background-position: -140px 20px;
+
+    animation-name: fieldsetAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    /* animation-direction: alternate; */
+  }
+
+  legend {
+    color: white;
+    text-shadow: 1px 1px rgb(176, 226, 255);
+  }
+
+  label {
+    color: white;
+    text-shadow: 1px 1px black;
+  }
+
+  input#submit {
+    top: 60vh;
+    left: 80vw;
+    position: fixed;
+
+    background: transparent;
+    border: 4px solid white;
+    border-radius: 10px;
+    padding: 5px 20px;
+    text-shadow: 1px 1px black;
+    color: white;
+  }
+
+  input#submit:hover {
+    cursor: pointer;
+    background: white;
+  }
